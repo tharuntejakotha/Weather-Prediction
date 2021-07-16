@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Temperature Prediction</h2>
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+</head>
+<div class="column">
+<form action="/predict" method="POST">
+  <label>YEAR</label>
+  <input type="text" name="year" placeholder=" "><br><br>
+  <label>MONTH</label>
+  <input type="text" name="month" placeholder=" "><br><br>
+  <button class="btn btn-success">Predict</button>
+
+</form>
+</div> 
+
+<div class="row">
+
+	{% if prediction %}
+	<h2 class="text-warning">predicted temperature is :{{prediction}}</h2>
+	{% endif %}
+</div>
+
+
+
+</body>
+</html>
