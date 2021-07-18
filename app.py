@@ -26,7 +26,7 @@ def predict():
         Month = request.form["month"]
         
         data=[[int(year),int(Month)]]
-        tmpt=pickle.load(open('./model/weather.pkl','rb'))
+        tmpt=pickle.load(open('./model/model.pkl','rb'))
         prediction=tmpt.predict(data)[0]
     return render_template("index.html",prediction=prediction)
     
