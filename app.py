@@ -1,13 +1,5 @@
 from flask import Flask,render_template,request
-import numpy as np  
-import pandas as pd 
-import plotly.express as px 
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from datetime import datetime 
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.model_selection import train_test_split 
-from sklearn.metrics import r2_score 
+ 
 import pickle
 
 app = Flask(__name__)
