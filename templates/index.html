@@ -3,28 +3,41 @@
 <body>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h2>Temperature Prediction</h2>
+<h2>Weather Prediction</h2>
 <link rel="stylesheet" type="text/css" href="../static/main.css">
 </head>
 <div class="column">
 <form action="/predict" method="POST">
+   <h2>predicting for the year 2018</h2>
   <label>YEAR</label>
-  <input type="text" name="year" placeholder=" Enter Year"><br><br>
-  <label>MONTH</label>
-  <input type="text" name="month" placeholder=" Enter from 0 - 11"><br><br>
+
+  <input type="text" name="year" value="2018" readonly><br><br>
+  <!--<label>MONTH</label>
+  <input type="text" name="month" placeholder=" Enter from 0 - 11"><br><br>--!>
+	<label for="Month">Choose a month:</label>
+  <select name="month" id="month">
+<option value="0">Jan</option>
+<option value="1">Feb</option>	
+<option value="2">Mar</option>
+<option value="3">Apr</option>
+<option value="4">May</option>
+<option value="5">Jun</option>
+<option value="6">July</option>
+<option value="7">Aug</option>
+<option value="8">Sep</option>
+<option value="9">Oct</option>
+<option value="10">Nov</option>
+<option value="11">Dec</option>
+  </select>
   <button class="btn btn-success">Predict</button>
 
 </form>
 </div> 
-
-<div class="row">
+<div class="coloumn">
 
 	{% if prediction %}
 	<h2 class="text-warning">predicted temperature is :{{prediction}}</h2>
 	{% endif %}
 </div>
-
-
-
 </body>
 </html>
