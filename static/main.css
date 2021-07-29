@@ -3,12 +3,12 @@ html{
 }
 
 body{
-  background-color:white;
+  
   font-family: Rockwell, Georgia, serif;
     max-width: 1000px;
   width:90%;
   margin: 0 auto;
-  box-shadow: 4px 4px 8px rgba(0,0,0.15)
+  
 }
 h1{
   background-color: tomato;
@@ -84,12 +84,3 @@ input[type=text]:hover{
 input[type=text]:focus{
   outline: 2px solid tan;
 }
-
-
-
-
-
-
-
-
-
